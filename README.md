@@ -2,14 +2,18 @@
 
 Doing tidytuesday work in Jupyter
 
-## Run in JupyterLab
+### Run with vanillin 
 
+Build image:
 ```
-docker run --rm -p 10000:8888 -e JUPYTER_ENABLE_LAB=yes -v "$PWD":/home/jovyan/work zachbogart/vanillin:v1.1
+vanillin tidytuesday
 ```
 
+Run JupyterLab:
 ```
-# copy token from output, use as password
+vanillin tidytuesday 10000
+```
 
-http://localhost:10000 
-```
+Don't have `vanillin` alias installed? Add to `zsh` [here](https://github.com/zachbogart/vanillin#vanillin).
+
+***

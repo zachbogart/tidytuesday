@@ -20,14 +20,14 @@
 # %% [markdown]
 # ## Setup
 
-# %% jupyter={"outputs_hidden": true}
+# %%
 install.packages("tidytuesdayR")
 
-# %% jupyter={"outputs_hidden": true}
+# %%
 library(tidyverse)
 library(tidytuesdayR)
 
-# %% jupyter={"outputs_hidden": true}
+# %%
 tt = tidytuesdayR::tt_load('2021-01-05')
 
 # %%
@@ -36,4 +36,8 @@ transit_cost = tt$transit_cost
 # %%
 head(transit_cost)
 
+# %% [markdown]
+# ## Exploration
+
 # %%
+trans

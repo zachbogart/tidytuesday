@@ -2,18 +2,32 @@
 
 Doing tidytuesday work in Jupyter
 
-### Run with vanillin 
+### Run this project with vanillin 🍦
 
 Build image:
 ```
-vanillin tidytuesday
+vanillin DOCKER_IMAGE_NAME
 ```
 
 Run JupyterLab:
 ```
-vanillin tidytuesday 10000
+vanillin DOCKER_IMAGE_NAME 10000
 ```
 
-Don't have `vanillin` alias installed? Add to `zsh` [here](https://github.com/zachbogart/vanillin#vanillin).
+Don't have `vanillin` installed? Add as an `oh-my-zsh` plugin [here](https://github.com/zachbogart/vanillin#vanillin)
+
+### Run this project manually
+
+Build image:
+```
+docker build --rm -t DOCKER_IMAGE_NAME .
+```
+
+Run JupyterLab:
+```
+docker run --rm -p 10000:8888 -e JUPYTER_ENABLE_LAB=yes -v $PWD:/home/jovyan/work name
+```
+
+Don't have Docker installed? Download [here](https://docs.docker.com/get-docker/)
 
 ***
